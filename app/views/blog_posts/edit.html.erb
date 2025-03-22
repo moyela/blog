@@ -1,0 +1,5 @@
+<%= link_to "<— back to view", blog_post_path %>
+<h1>Edit Blog Post</h1>
+
+<%= render partial: "form" %>
+<%= button_to "Delete this post", @blog_post, method: :delete, data: {turbo_confirm:"Are you sure you want to delete? This action cannot be undone."} %>
