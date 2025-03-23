@@ -1,12 +1,12 @@
 class BlogPostsController < ApplicationController
-    before_action :set_blog_post, except: [:index, :new, :create]
+    before_action :authenticate_user!, except: [ :index, :show ]
+    before_action :set_blog_post, except: [ :index, :new, :create ]
 
     def index
         @blog_posts = BlogPost.all
     end
 
     def show
-
     end
 
     def new
@@ -22,7 +22,7 @@ class BlogPostsController < ApplicationController
         end
     end
 
-    def edit    
+    def edit
     rescue ActiveRecord::RecordNotFound
         redirect_to root_path
     end
@@ -44,7 +44,7 @@ class BlogPostsController < ApplicationController
     end
 
     private
-    
+
     def blog_post_params
         params.require(:blog_post).permit(:title, :body)
     end
@@ -54,5 +54,4 @@ class BlogPostsController < ApplicationController
     rescue ActiveRecord::RecordNotFound
         redirect_to root_path
     end
-
 end

@@ -1,9 +1,12 @@
 <h2>
-    <%= link_to "Home", root_path %>
+  <%= link_to "Home", root_path %>
 </h2>
+<% if user_signed_in? %>
+  <div>
+    <%= link_to "Edit this Post", edit_blog_post_path %>
+  </div>
+<% end %>
 <h1> <%= @blog_post.title %> </h1>
 <div>
-    <%= @blog_post.body %>
+  <%= @blog_post.body %>
 </div>
-<div>
-    <%= link_to "Edit this Post", edit_blog_post_path %>
