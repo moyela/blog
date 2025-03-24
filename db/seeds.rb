@@ -11,3 +11,6 @@
 user = User.where(email: "wemi@moyela.com").first_or_initialize
 
 user.update!(password: "password", password_confirmation: "password")
+
+BlogPost.create(title: "Hello world, my name is Meeseexe and I'm a robot", body: "This is the story of how I found myself living on this webpage.")
+BlogPost.create(title: "Meeseexe Diary Entry Part 1", body: "My server woke me up and I've been cleaning my new home")
