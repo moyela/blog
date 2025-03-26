@@ -11,7 +11,7 @@
         <%= link_to blog_post.title, blog_post_path(blog_post.id) %>
       </div>
       <% if blog_post.is_draft? %>
-        <div class="bg-gray-100 ml-4 px-2 py-[0px] rounded-sm text-gray-900 ">
+        <div class="bg-red-100 ml-4 px-2 py-[0px] rounded-sm text-gray-900 ">
           Draft 
         </div>
       <% elsif blog_post.is_scheduled? %>
