@@ -9,12 +9,16 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <span class="text-3xl">
+      <%= form.label :title %>
+    </span>
+    <span class="text-3xl">
+      <%= form.text_field :title %>
+    </span>
   </div>
   <div>
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
   </div>
   <div>
     <%= form.label :published_at %>
