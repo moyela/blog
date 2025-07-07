@@ -40,7 +40,7 @@ gem "image_processing", "~> 1.2"
 
 gem "devise", "~> 4.9"
 
-gem "tailwindcss-rails", "~> 4.2"
+gem "tailwindcss-rails", "~> 4.3"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", ">= 2.1"
